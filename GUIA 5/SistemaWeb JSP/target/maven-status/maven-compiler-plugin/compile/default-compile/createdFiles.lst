@@ -1,0 +1,5 @@
+com\mycompany\sistemaweb\resources\JakartaEE10Resource.class
+Servlet\ServletPrincipal.class
+com\mycompany\sistemaweb\JakartaRestConfiguration.class
+Models\ViewModelPasajeros.class
+ServletError\ServletError.class

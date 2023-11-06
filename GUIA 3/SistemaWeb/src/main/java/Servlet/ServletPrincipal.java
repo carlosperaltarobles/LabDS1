@@ -90,7 +90,37 @@ public class ServletPrincipal extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        String accion=request.getParameter("accion");
+
+        if(accion.equals("Login")){
+            String usuario=request.getParameter("tfUsuario");
+            String password=request.getParameter("tfContrasenia");
+
+            try(PrintWriter print=response.getWriter()){
+                if(usuario.equals("admin") && password.equals("admin")){
+                    print.println("<!DOCTYPE html>");
+                    print.println("<html>");
+                    print.println("<head>");
+                    print.println("<title>Servlet ServletPrincipal</title>");
+                    print.println("</head>");
+                    print.println("<body>");
+                    print.println("<h1>Bienvenido al sistema de vuelos </h1>");
+                    print.println("</body>");
+                    print.println("</html>");
+                }
+                else{
+                    print.println("<!DOCTYPE html>");
+                    print.println("<html>");
+                    print.println("<head>");
+                    print.println("<title>Servlet ServletPrincipal</title>");
+                    print.println("</head>");
+                    print.println("<body>");
+                    print.println("<h1>Usuario o contraseña incorrectos </h1>");
+                    print.println("</body>");
+                    print.println("</html>");
+                }
+            }
+        }     
     }
 
     /**

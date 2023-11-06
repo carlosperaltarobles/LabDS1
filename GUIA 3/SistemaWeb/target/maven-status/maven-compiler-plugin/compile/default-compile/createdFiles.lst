@@ -1,3 +1,3 @@
 com\mycompany\sistemaweb\resources\JakartaEE10Resource.class
-Servlet\ServletPrincipal.class
 com\mycompany\sistemaweb\JakartaRestConfiguration.class
+Servlet\ServletPrincipal.class
